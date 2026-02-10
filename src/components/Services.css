@@ -38,7 +38,8 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -78,4 +79,27 @@
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.learn-more-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.learn-more-btn:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    transform: translateX(5px);
 }

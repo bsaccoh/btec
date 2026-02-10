@@ -21,17 +21,29 @@
 }
 
 .navbar-logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--text-main);
-    letter-spacing: -0.5px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.navbar-logo span {
-    color: var(--primary);
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 55px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-image {
+    height: 48px;
+}
+
+.logo-image:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
 .nav-menu {

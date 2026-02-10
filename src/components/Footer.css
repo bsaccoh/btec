@@ -14,6 +14,12 @@
     margin-bottom: 60px;
 }
 
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
 .footer-section h3 {
     font-size: 1.5rem;
     font-weight: 700;

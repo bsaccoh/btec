@@ -1,6 +1,7 @@
 import React from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import './Footer.css'
+import logo from '../assets/trust-shield_logo.png'
 
 const Footer = () => {
     useScrollReveal();
@@ -8,7 +9,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section reveal">
-                    <h3>B-TEC <span>Digital</span></h3>
+                    <img src={logo} alt="B-TEC Digital Solution" className="footer-logo" />
                     <p>
                         Providing expert IT consulting and software solutions to help your business thrive in the digital age.
                     </p>

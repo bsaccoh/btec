@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
+import logo from '../assets/trust-shield_logo.png'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -16,7 +17,9 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-logo">
-                <a href="#">B-TEC <span>Digital</span></a>
+                <a href="#">
+                    <img src={logo} alt="B-TEC Digital Solution" className="logo-image" />
+                </a>
             </div>
 
             <ul className="nav-menu">

@@ -1,0 +1,241 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: var(--secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-main);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    padding: 40px 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: rgba(245, 158, 11, 0.1);
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.modal-body {
+    padding: 30px 40px;
+}
+
+.modal-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.modal-section p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.features-list,
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li,
+.benefits-list li {
+    color: var(--text-muted);
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.benefits-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.modal-footer {
+    padding: 20px 40px 40px;
+    text-align: center;
+}
+
+.modal-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary);
+    color: var(--bg-dark);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.modal-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.6);
+}
+
+/* Scrollbar styling for modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #e8960a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        max-height: 95vh;
+        margin: 10px;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+}
