@@ -1,0 +1,40 @@
+.why-choose-us {
+    padding: 100px 20px;
+    background-color: #0b1120;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(5px);
+}
+
+.feature-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
