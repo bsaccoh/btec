@@ -48,7 +48,7 @@ const servicesData = [
         title: "Enterprise Applications",
         icon: "🏢",
         desc: "Scalable enterprise-grade applications to streamline your operations.",
-        detailedDesc: "Build robust enterprise solutions that integrate seamlessly with your existing systems. We specialize in creating comprehensive platforms that manage complex business processes, from ERP to CRM systems.",
+        detailedDesc: "Build robust enterprise solutions that integrate seamlessly with your existing systems. We specialize in creating comprehensive platforms that manage complex business processes, from ERP, Accounting, HR and to CRM systems.",
         features: [
             "Enterprise Resource Planning (ERP) systems",
             "Customer Relationship Management (CRM) solutions",
@@ -193,13 +193,15 @@ const Services = () => {
     useScrollReveal();
 
     const handleServiceClick = (service) => {
+        console.log('Clicked service:', service.title)
         setSelectedService(service)
         setIsModalOpen(true)
+        console.log('Modal should open now')
     }
 
     const handleCloseModal = () => {
+        console.log('Closing modal')
         setIsModalOpen(false)
-        setTimeout(() => setSelectedService(null), 300)
     }
 
     return (

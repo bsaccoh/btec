@@ -1,14 +1,22 @@
+/* Dark theme variables */
 :root {
   --primary: #f59e0b;
+  --primary-light: #fbbf24;
+  --primary-dark: #d97706;
   --secondary: #001f3f;
   --accent: #38bdf8;
-  /* Light blue for highlights */
-  --bg-dark: #0f172a;
-  --text-main: #ffffff;
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --glass-bg: rgba(15, 23, 42, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --font-main: 'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --card-bg: #1e293b;
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --nav-scrolled-bg: rgba(15, 23, 42, 0.95);
+  --mobile-menu-bg: rgba(15, 23, 42, 0.98);
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --max-width: 1280px;
   --nav-height: 80px;
 }
@@ -21,10 +29,11 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-dark);
+  background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -108,4 +117,46 @@ button {
 
 .delay-300 {
   transition-delay: 0.3s;
+}
+
+/* Global Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header h2,
+  .section-title {
+    font-size: 1.6rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .section-header h2,
+  .section-title {
+    font-size: 1.35rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem !important;
+  }
+
+  section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
 }

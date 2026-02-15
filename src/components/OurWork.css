@@ -1,0 +1,193 @@
+.our-work {
+    padding: 60px 0;
+    background-color: #0f172a;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-work .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 70px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Text Section */
+.work-text-section {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.work-text-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation Section */
+.work-animation-section {
+    width: 100%;
+    padding: 2rem 0;
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.work-visual {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .work-text-container {
+        padding: 1.5rem;
+    }
+    
+    .work-visual {
+        padding: 1rem;
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-text-section {
+        margin-bottom: 2rem;
+    }
+    
+    .work-text-container {
+        padding: 1.25rem;
+    }
+    
+    .work-visual {
+        min-height: 300px;
+    }
+}
+
+.work-text h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.work-text p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.work-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e2e8f0;
+    font-size: 1.05rem;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(99, 102, 241, 0.15);
+    border-radius: 50%;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Work visual styles are now in the animation section */
+
+@media (max-width: 1024px) {
+    .work-visual {
+        min-height: 450px;
+        max-height: 600px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-visual {
+        min-height: 400px;
+        max-height: 550px;
+        padding: 15px;
+        margin: 1rem 0;
+    }
+}
+
+.work-visual > * {
+    max-width: 100%;
+    height: auto;
+}
+
+.animation-placeholder {
+    text-align: center;
+    color: #64748b;
+    padding: 30px;
+    border: 2px dashed rgba(99, 102, 241, 0.3);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.animation-placeholder p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .work-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .work-visual {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+    
+    .work-text h3 {
+        font-size: 1.7rem;
+    }
+    
+    .work-visual {
+        padding: 20px;
+        min-height: 300px;
+    }
+}

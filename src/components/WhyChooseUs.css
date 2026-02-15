@@ -38,3 +38,18 @@
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 3.5rem 1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-box {
+        padding: 1.25rem;
+    }
+}

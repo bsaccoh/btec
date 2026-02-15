@@ -1,0 +1,117 @@
+.newsletter-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-color) 100%);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.newsletter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.newsletter-text {
+    flex: 1;
+}
+
+.newsletter-text h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.newsletter-form {
+    flex: 1;
+}
+
+.newsletter-input-wrapper {
+    display: flex;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-input-wrapper:focus-within {
+    border-color: var(--primary);
+}
+
+.newsletter-input-wrapper input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.9rem 1.25rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.newsletter-input-wrapper input::placeholder {
+    color: var(--text-muted);
+}
+
+.newsletter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #0f172a;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    background: #e8960a;
+}
+
+.newsletter-success {
+    color: #34d399;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .newsletter-input-wrapper {
+        flex-direction: column;
+    }
+
+    .newsletter-btn {
+        justify-content: center;
+        padding: 0.8rem;
+    }
+}

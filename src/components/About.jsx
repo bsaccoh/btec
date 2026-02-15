@@ -1,6 +1,7 @@
-import React from 'react'
-import useScrollReveal from '../hooks/useScrollReveal'
-import './About.css'
+import React from 'react';
+import { FaBullseye, FaEye } from 'react-icons/fa';
+import useScrollReveal from '../hooks/useScrollReveal';
+import './About.css';
 
 const About = () => {
     useScrollReveal('reveal-left');
@@ -38,6 +39,30 @@ const About = () => {
                             <div className="stat-item">
                                 <h3>99%</h3>
                                 <p>Client Satisfaction</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* New Mission & Vision Section */}
+                <div className="mission-vision-section">
+                    <div className="container">
+                        <h2 className="section-title">Our <span className="text-gradient">Core Values</span></h2>
+                        <div className="mission-vision-grid">
+                            <div className="mission-vision-card">
+                                <div className="mission-vision-icon">
+                                    <FaBullseye className="icon" />
+                                </div>
+                                <h3>Our Mission</h3>
+                                <p>To empower businesses with innovative digital solutions that drive growth, efficiency, and competitive advantage through cutting-edge technology and expert consulting services.</p>
+                            </div>
+                            <div className="mission-vision-card">
+                                <div className="mission-vision-icon">
+                                    <FaEye className="icon" />
+                                </div>
+                                <h3>Our Vision</h3>
+                                <p>To be the leading digital transformation partner for organizations worldwide, recognized for our technical excellence, innovative solutions, and commitment to client success.</p>
                             </div>
                         </div>
                     </div>
