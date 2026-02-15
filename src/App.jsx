@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ClientLogos from './components/ClientLogos'
@@ -25,9 +26,15 @@ import BackToTop from './components/BackToTop'
 import WhatsAppWidget from './components/WhatsAppWidget'
 import CookieConsent from './components/CookieConsent'
 import AnimatedSection from './components/AnimatedSection'
+import LegalModal from './components/LegalModal'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsOfService from './components/TermsOfService'
 import './index.css'
 
 function App() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+
   return (
     <div className="app">
       <LoadingScreen />
@@ -84,10 +91,21 @@ function App() {
       <AnimatedSection>
         <Contact />
       </AnimatedSection>
-      <Footer />
+      <Footer
+        onOpenPrivacy={() => setShowPrivacy(true)}
+        onOpenTerms={() => setShowTerms(true)}
+      />
       <BackToTop />
       <WhatsAppWidget />
       <CookieConsent />
+
+      {/* Legal Page Modals */}
+      <LegalModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)}>
+        <PrivacyPolicy />
+      </LegalModal>
+      <LegalModal isOpen={showTerms} onClose={() => setShowTerms(false)}>
+        <TermsOfService />
+      </LegalModal>
     </div>
   )
 }

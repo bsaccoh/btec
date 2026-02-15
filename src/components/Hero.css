@@ -33,8 +33,9 @@
 
 .hero-content {
     max-width: 1000px;
-    z-index: 1;
+    z-index: 2;
     animation: fadeIn 1s ease-out;
+    position: relative;
 }
 
 .hero h1 {

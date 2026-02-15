@@ -3,7 +3,7 @@ import useScrollReveal from '../hooks/useScrollReveal'
 import './Footer.css'
 import logo from '../assets/trust-shield_logo.png'
 
-const Footer = () => {
+const Footer = ({ onOpenPrivacy, onOpenTerms }) => {
     useScrollReveal();
     return (
         <footer className="footer">
@@ -52,6 +52,11 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
+                <div className="footer-legal-links">
+                    <button className="footer-legal-btn" onClick={onOpenPrivacy}>Privacy Policy</button>
+                    <span className="footer-legal-sep">|</span>
+                    <button className="footer-legal-btn" onClick={onOpenTerms}>Terms of Service</button>
+                </div>
                 <p>&copy; {new Date().getFullYear()} B-TEC Digital Solutions. All rights reserved.</p>
             </div>
         </footer>

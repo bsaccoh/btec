@@ -1,5 +1,6 @@
 import React from 'react'
 import useScrollReveal from '../hooks/useScrollReveal'
+import HeroParticles from './HeroParticles'
 import './Hero.css'
 
 const Hero = () => {
@@ -11,6 +12,7 @@ const Hero = () => {
                 <source src="/video/background.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+            <HeroParticles />
 
             <div className="hero-content">
                 <h1 className="reveal">Transforming Ideas into <span className="text-gradient">Digital Reality</span></h1>

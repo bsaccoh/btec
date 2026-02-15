@@ -74,6 +74,17 @@
     color: var(--text-main);
 }
 
+.cookie-privacy-link {
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cookie-privacy-link:hover {
+    color: var(--primary-light);
+}
+
 @media (max-width: 768px) {
     .cookie-content {
         flex-direction: column;

@@ -29,7 +29,10 @@ const CookieConsent = () => {
             <div className="cookie-content">
                 <p>
                     We use cookies to enhance your browsing experience and analyze site traffic.
-                    By continuing, you agree to our use of cookies.
+                    By continuing, you agree to our use of cookies.{' '}
+                    <a href="#privacy" className="cookie-privacy-link" onClick={(e) => { e.preventDefault(); document.querySelector('.footer-legal-btn')?.click(); }}>
+                        Learn more
+                    </a>
                 </p>
                 <div className="cookie-actions">
                     <button className="cookie-btn cookie-accept" onClick={accept}>
